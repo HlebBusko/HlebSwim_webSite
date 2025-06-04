@@ -2,6 +2,8 @@
 
 function Card({children, price, img}){
 
+  console.log('pipka');
+
   return(
     <div className="rounded shadow-lg overflow-hidden px-4 py-4 flex flex-col gap-2">
       <div className="rounded-lg overflow-hidden">
