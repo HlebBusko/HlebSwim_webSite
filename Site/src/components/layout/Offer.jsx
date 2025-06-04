@@ -3,7 +3,7 @@ import Card from "../ui/Card";
 function Offer(){
 
   return(
-    <div id="offer" className="flex flex-col md:flex-row gap-4 lg:px-16 sm:px-8 px-4 w-full py-2 justify-center align-center">
+    <div id="offer" className="flex flex-col md:flex-row gap-4 lg:px-16 sm:px-8 px-4 w-full py-2 justify-center">
       
       <Card price={<>
         Price: <strong>150PLN</strong>  + entry to the swimming pool for adults 20PLN for kids 12PLN. For multisport card holders entry is free

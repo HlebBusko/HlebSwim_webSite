@@ -1,6 +1,6 @@
 import ButtonMain from "../ui/ButtonMain.jsx";
 import {useState, useRef, useEffect} from "react";
-import {Link, Element } from "react-scroll";
+import {Link} from "react-scroll";
 import NavLink from "../ui/NavLink.jsx";
 
 function NavBar(){
@@ -40,7 +40,7 @@ function NavBar(){
     <div className="middle-section flex">
       <ul className="lg:gap-5 gap-3 items-center h-full hidden sm:flex">
         {links.map((link) => 
-          <NavLink key={link.id} link={link} className={'h-full cursor-pointer hover:text-main flex px-2 items-center rounded w-full transition-all duration-300 font-medium text-blackText whitespace-nowrap'} offset={-80} activeClass={'text-main underline decoration-2 decoration-main underline-offset-20'}></NavLink>
+          <NavLink key={link.id} link={link} className={'h-full cursor-pointer hover:text-main flex px-2 items-center rounded w-full transition-all duration-300 font-medium text-blackText whitespace-nowrap'} offset={-70} activeClass={'text-main underline decoration-2 decoration-main underline-offset-20'}></NavLink>
         )}
       </ul>
     </div>

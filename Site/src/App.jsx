@@ -4,6 +4,7 @@ import Footer from "./components/layout/Footer.jsx";
 import HeroSection from "./components/features/HeroSection.jsx";
 import AboutMe from "./components/features/AboutMe.jsx";
 import Offer from "./components/layout/Offer.jsx";
+import Contact from "./components/layout/Contact.jsx";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <HeroSection />
     <AboutMe />
     <Offer />
+    <Contact />
     <Footer />
     </div>
   )
