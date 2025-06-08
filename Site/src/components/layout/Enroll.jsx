@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ButtonMain from "../ui/ButtonMain";
 
 function Enroll(){
 
   const [typeOFLesson, setTypeOFLesson] = useState(null);
   const [selectInput, setSelectInput] = useState(null);
+  const confirmationTimeout = useRef(null);
   const [errors, setErrors] = useState({});
+  const [splitErrors, setSplitErrors] = useState({});
+  const [showConfirmation, setShowConfirmation] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     birth: '',
@@ -17,11 +20,11 @@ function Enroll(){
     name2: '',
     birth2: ''
   })
-  const [splitErrors, setSplitErrors] = useState({});
+  
   useEffect(() => {
     console.log(formData);
     console.log(splitLessonData);
-  }, [formData, splitLessonData])
+  }, [formData, splitLessonData]);
 
   function handleInput(value){
     setTypeOFLesson(value === 'true');
@@ -31,13 +34,28 @@ function Enroll(){
     e.preventDefault();
 
     const newErrors = {};
+    const newSplitErrors ={};
+    let valid = true;
 
-    if(!formData.name) newErrors.name = true;
-    if(!formData.birth) newErrors.birth = true;
-    if(!formData.goal) newErrors.goal = true;
-    if(!formData.number) newErrors.number = true;
+    if(!formData.name)   {newErrors.name = true; valid = false}
+    if(!formData.birth)  {newErrors.birth = true; valid = false}
+    if(!formData.goal)   {newErrors.goal = true; valid = false}
+    if(!formData.number) {newErrors.number = true; valid = false} 
+
+    if(typeOFLesson){
+      if(!splitLessonData.name2) {newSplitErrors.name2 = true; valid = false}
+      if(!splitLessonData.birth2) {newSplitErrors.birth2 = true; valid = false}
+    }
+
+    if(typeOFLesson === null){
+      setSelectInput(true);
+      valid = false;
+    }
 
     setErrors(newErrors);
+    setSplitErrors(newSplitErrors);
+
+    if(!valid) return;
 
     setFormData({name: '',
       birth: '',
@@ -45,16 +63,21 @@ function Enroll(){
       number: ''}
     );
 
-    const newSplitErrors ={};
+    setSplitLessonData({
+      name2: '',
+      birth2: ''
+    });
 
-    if(!splitLessonData.name2) newSplitErrors.name2 = true;
-    if(!splitLessonData.birth2) newSplitErrors.birth2 = true;
+    setShowConfirmation(true);
 
-    setSplitErrors(newSplitErrors);
-
-    if(typeOFLesson === null){
-      setSelectInput(true);
+    if(confirmationTimeout.current){
+      clearTimeout(confirmationTimeout.current);
     }
+
+    setShowConfirmation(true);
+    confirmationTimeout.current = setTimeout(() => {
+      setShowConfirmation(false);
+    }, 3000);
   }
 
   function handleChange(e){
@@ -101,7 +124,7 @@ function Enroll(){
       </div>
 
       <div className="flex flex-col">
-      {fields.map((field, index1) => 
+      {fields.map((field) => 
       <div key={field.id} className="flex flex-col">
 
         <label htmlFor={field.id} className="text-lg">
@@ -129,15 +152,24 @@ function Enroll(){
           <label htmlFor={field.id} className="text-lg">
             {field.name}
           </label>
-          <input value={setSplitLessonData[field.id]} className={`${splitErrors[field.id] ? 'bg-red-100' : 'bg-white'} px-4 py-2 border rounded-lg ${splitLessonData[field.id] ? 'bg-white' : ''}`}  id={field.id} name={field.id} type={field.type} placeholder={field.placeholder} onChange={(e) => handleSplitChange(e)}></input>
+          <input value={splitLessonData[field.id]} className={`${splitErrors[field.id] ? 'bg-red-100' : 'bg-white'} px-4 py-2 border rounded-lg ${splitLessonData[field.id] ? 'bg-white' : ''}`}  id={field.id} name={field.id} type={field.type} placeholder={field.placeholder} onChange={(e) => handleSplitChange(e)}></input>
           <p className={`${splitErrors[field.id] ? 'text-red-500' : 'hidden'} ${splitLessonData[field.id] ? 'hidden' : ''}`}>{field.name} is required</p>
           </div>
           
       )) : ''}
       </div>
       )}
-      <ButtonMain type="submit" className="bg-main text-white hover:bg-white border-main hover:text-main shadow-lg mt-6 py-2" onClick={(e) => handleSubmit(e)}>Submit</ButtonMain>
+      <div className="w-full h-20 flex flex-col">
+         <div className={`flex gap-2 mt-2 ${showConfirmation ? 'block' : 'hidden'} mb-2`}>
+        <img className="w-6" src="./src/assets/checkmark.png" alt="" />
+        <div className="text-green-500"> 
+          Form successfully submited. I'll reach you out as soon as possible
         </div>
+      </div>
+      <ButtonMain type="submit" className=" mt-auto bg-main text-white hover:bg-white border-main hover:text-main shadow-lg py-2 w-full h-[55%]" onClick={(e) => handleSubmit(e)}>Submit</ButtonMain>
+        </div>
+      </div>
+     
   </div>
   </form>);
 }
