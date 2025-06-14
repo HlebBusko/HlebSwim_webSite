@@ -9,10 +9,15 @@ A responsive website for promoting and booking swimming lessons — built with R
 ## ✅ Features
 
 -Responsive NavBar with spy functions and smooth scrolling to the relevant section
+<br/>
 -Responsive Hero and About Me sections explaining who am I and what am I doing
+<br/>
 -Offer section consist of two cards with two types of lessons that I conduct
+<br/>
 -Contact section with embedded map
+<br/>
 -Responsive form application with conditional rendering, UI feedback and validation
+<br/>
 -Responsive footer with all the stuff website offers in one place
 
 ## 🛠️ Tech Stack
@@ -31,6 +36,7 @@ git clone https://github.com/HlebBusko/HlebSwim_webSite
 cd HlebSwim_webSite
 npm install
 npm run dev
+```
 
 ## Author
 
