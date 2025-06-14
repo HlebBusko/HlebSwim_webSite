@@ -28,7 +28,7 @@ function NavBar(){
   const links = [
     {link: 'About me', id: 'about'}, 
     {link: 'Offer', id: 'offer'}, 
-    {link: 'Contact', id: 'contact'}
+    {link: 'Contact', id: 'contact'},
   ];
 
   return(
@@ -47,7 +47,9 @@ function NavBar(){
     <div className="right-section flex items-center ml-6 gap-3">
       <img className={`w-8 sm:hidden cursor-pointer ${!isDisplayed ? 'block' : 'hidden'}`} src="./src/assets/menu.svg" alt="burger-menu" onClick={handleMenu}  role="button" tabIndex={0} aria-expanded={isDisplayed}/>
       <img src="./src/assets/close.svg" className={`w-8 ${isDisplayed ? 'block' : 'hidden'} cursor-pointer`} alt="" onClick={handleMenu} />
+      <Link to="enroll" smooth={true} duration={300} className="inline-block" spy={true}  offset={-70}>
       <ButtonMain className="bg-main text-white hover:bg-white border-main hover:text-main shadow-lg">Enroll</ButtonMain>
+      </Link>
     </div>
   </nav>
 

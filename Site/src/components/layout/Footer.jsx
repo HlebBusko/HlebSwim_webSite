@@ -22,7 +22,10 @@ function Footer(){
         </div>
       </div>
          <div>
-        <ButtonMain className="hover:bg-main hover:text-white">Enroll</ButtonMain>
+          <Link to="enroll" smooth={true} duration={300} className="inline-block"  offset={-70}>
+          <ButtonMain  className="hover:bg-main hover:text-white">Enroll</ButtonMain>
+          </Link>
+        
       </div>  
     </div>
   </div>);

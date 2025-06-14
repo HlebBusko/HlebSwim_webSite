@@ -22,9 +22,8 @@ function Enroll(){
   })
   
   useEffect(() => {
-    console.log(formData);
-    console.log(splitLessonData);
-  }, [formData, splitLessonData]);
+   
+  }, );
 
   function handleInput(value){
     setTypeOFLesson(value === 'true');
@@ -67,6 +66,8 @@ function Enroll(){
       name2: '',
       birth2: ''
     });
+
+    setSelectInput(null);
 
     setShowConfirmation(true);
 
@@ -114,7 +115,7 @@ function Enroll(){
 
     const steps = ['1.Choose the lesson you want to take', '2.Fill all the fields', '3.Wait for my call where i explain you all the details']
 
-  return(<form className="lg:px-16 sm:px-8 px-4 w-full py-8">
+  return(<form id='enroll' className="lg:px-16 sm:px-8 px-4 w-full py-8">
     <div className="border-2 border-main shadow px-6 py-4 rounded-lg">
       <div>
         <div className="text-lg mb-1">How to easy enroll on classes:</div>
@@ -166,7 +167,7 @@ function Enroll(){
           Form successfully submited. I'll reach you out as soon as possible
         </div>
       </div>
-      <ButtonMain type="submit" className=" mt-auto bg-main text-white hover:bg-white border-main hover:text-main shadow-lg py-2 w-full h-[55%]" onClick={(e) => handleSubmit(e)}>Submit</ButtonMain>
+      <ButtonMain type="submit" className="mt-auto bg-main text-white hover:bg-white border-main hover:text-main shadow-lg py-2 w-full h-[55%]" onClick={(e) => handleSubmit(e)}>Submit</ButtonMain>
         </div>
       </div>
      

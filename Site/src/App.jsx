@@ -4,7 +4,7 @@ import HeroSection from "./components/layout/HeroSection.jsx";
 import AboutMe from "./components/layout/AboutMe.jsx";
 import Offer from "./components/layout/Offer.jsx";
 import Contact from "./components/layout/Contact.jsx";
-import Enroll from "./components/layout/Enroll.jsx";
+import EnrollTraining from "./components/layout/EnrollTraining.jsx";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
      <AboutMe />
      <Offer />
      <Contact />
-     <Enroll />
+     <EnrollTraining />
      <Footer />
     </div>
   )
