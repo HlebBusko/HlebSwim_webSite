@@ -7,18 +7,17 @@ import Contact from "./components/layout/Contact.jsx";
 import EnrollTraining from "./components/layout/EnrollTraining.jsx";
 
 function App() {
-
   return (
     <div className="flex flex-col min-h-screen w-full scroll-smooth">
-     <NavBar />
-     <HeroSection />
-     <AboutMe />
-     <Offer />
-     <Contact />
-     <EnrollTraining />
-     <Footer />
+      <NavBar />
+      <HeroSection />
+      <AboutMe />
+      <Offer />
+      <Contact />
+      <EnrollTraining />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
