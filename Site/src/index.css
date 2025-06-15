@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mukta:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-main: #4A90E2;
-  --color-blackText: hsla(0, 0.00%, 20%);
-  --color-footer: hsl(203, 100.00%, 65.90%);
-  --color-footerBG: hsla(0, 0.00%, 97%);
-  --color-footerText: hsla(0, 0.00%, 40%);
-  --color-bgSection: #C4E6F7;
+  --color-main: #4a90e2;
+  --color-blackText: hsla(0, 0%, 20%);
+  --color-footer: hsl(203, 100%, 65.9%);
+  --color-footerBG: hsla(0, 0%, 97%);
+  --color-footerText: hsla(0, 0%, 40%);
+  --color-bgSection: #c4e6f7;
 }
 
-body{
-  font-family: 'Inter', sans-serif;
-  height:1500px;
+body {
+  font-family: "Inter", sans-serif;
+  height: 1500px;
   margin-top: 80px;
 }
