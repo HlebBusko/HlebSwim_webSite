@@ -33,7 +33,7 @@ To run the project locally:
 
 ```bash
 git clone https://github.com/HlebBusko/HlebSwim_webSite
-cd HlebSwim_webSite
+cd HlebSwim_webSite/Site
 npm install
 npm run dev
 ```
