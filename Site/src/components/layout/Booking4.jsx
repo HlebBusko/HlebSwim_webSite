@@ -20,11 +20,14 @@ function Booking4() {
     date: day,
     slots: [...timeSlots],
   }));
+  const currentMonth = today.startOf('month').month();
+  const nextMonth = today.add(1, 'month').startOf('month').month();
 
   const [pickedDay, setPickedDay] = useState(null);
   const [displaySlots, setDisplaySlots] = useState(false);
   const [pickedTimeDay, setPickedTimeDay] = useState(null);
   const [bookedLessons, setBookedLessons] = useState(null);
+  const [pickedMonth, setPickedMonth] = useState(currentMonth);
 
   function handlePickedTimeDay(day, slot) {
     setPickedTimeDay({ day: day, time: slot });
@@ -40,6 +43,11 @@ function Booking4() {
       setPickedDay(date);
       setDisplaySlots(true);
     }
+  }
+
+  function handlePickedMonth(e) {
+    const { value } = e.target;
+    setPickedMonth(value);
   }
 
   function mondayFirst(day) {
@@ -71,8 +79,10 @@ function Booking4() {
     fetchData();
   }, []);
   useEffect(() => {
-    console.log('baba', bookedLessons);
-  }, [bookedLessons]);
+    console.log(currentMonth);
+    console.log(nextMonth);
+    console.log('Picked month', pickedMonth);
+  }, [currentMonth, nextMonth, pickedMonth]);
   return (
     <div className="flex">
       <div>
@@ -155,6 +165,21 @@ function Booking4() {
         >
           Book the lesson
         </button>
+      </div>
+      <div>
+        <select
+          value={pickedMonth}
+          onChange={(e) => handlePickedMonth(e)}
+          name=""
+          id=""
+        >
+          <option value={currentMonth}>
+            {today.startOf('month').format('MMMM')}
+          </option>
+          <option value={nextMonth}>
+            {today.startOf('month').add(1, 'month').format('MMMM')}
+          </option>
+        </select>
       </div>
     </div>
   );
