@@ -36,7 +36,7 @@ function NavBar() {
   return (
     <div ref={dropDownRef}>
       <nav
-        className={`flex h-18 w-full fixed top-0 left-0 right-0 lg:px-16 md:px-8 py-2 bg-white ${!isDisplayed ? 'shadow' : ''} z-50`}
+        className={`flex h-18 w-full fixed top-0 left-0 right-0 lg:px-16 md:px-8 px-4 py-2 bg-white ${!isDisplayed ? 'shadow' : ''} z-50`}
       >
         <div className="left-section mr-auto">
           <Link to="hero" smooth={true} duration={300} offset={-100}>
