@@ -5,9 +5,6 @@ import AboutMe from './components/layout/AboutMe.jsx';
 import Offer from './components/layout/Offer.jsx';
 import Contact from './components/layout/Contact.jsx';
 import EnrollTraining from './components/layout/EnrollTraining.jsx';
-// import Booking3 from './components/layout/Booking3.jsx';
-// import Booking from './components/layout/Booking.jsx';
-// import Booking2 from './components/layout/Booking2.jsx';
 import Booking4 from './components/layout/Booking4.jsx';
 
 function App() {
@@ -19,9 +16,6 @@ function App() {
       <Offer />
       <Contact />
       <EnrollTraining />
-      {/* <Booking /> */}
-      {/* <Booking2 /> */}
-      {/* <Booking3 /> */}
       <Booking4 />
       <Footer />
     </div>

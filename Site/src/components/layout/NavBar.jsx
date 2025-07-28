@@ -68,7 +68,7 @@ function NavBar() {
           <img
             className={`w-8 sm:hidden cursor-pointer ${!isDisplayed ? 'block' : 'hidden'}`}
             src={menu}
-            alt="burger-menu"
+            alt="Open dropdown"
             onClick={handleMenu}
             role="button"
             tabIndex={0}
@@ -77,13 +77,13 @@ function NavBar() {
           <img
             src={close}
             className={`w-8 ${isDisplayed ? 'block' : 'hidden'} cursor-pointer`}
-            alt=""
+            alt="Close dropdown"
             onClick={handleMenu}
           />
           <Link
             to="enroll"
             smooth={true}
-            duration={300}
+            duration={600}
             className="inline-block"
             spy={true}
             offset={-70}

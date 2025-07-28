@@ -11,7 +11,7 @@ function Footer() {
   ];
 
   return (
-    <div className="mt-auto w-full text-white">
+    <div className="mt-auto w-full text-white pb-2">
       <hr className="border-t border-gray-300" />
       <div className=" flex justify-between lg:px-16 md:px-8 px-4 py-2">
         <div>
@@ -35,16 +35,24 @@ function Footer() {
         <div>
           <div className="text-footerText font-bold">Find me:</div>
           <div className="flex gap-2 items-center justify-center">
-            <img
-              className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-              src={instagram}
-              alt=""
-            />
-            <img
-              className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-              src={facebook}
-              alt=""
-            />
+            <a href="https://www.instagram.com/hleb_swim/" target="_blank">
+              {' '}
+              <img
+                className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                src={instagram}
+                alt="Instagram Icon"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61563499358999"
+              target="_blank"
+            >
+              <img
+                className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                src={facebook}
+                alt="Facebook Icon"
+              />
+            </a>
           </div>
         </div>
         <div>

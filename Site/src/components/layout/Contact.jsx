@@ -7,13 +7,13 @@ function Contact() {
   const socialLinks = [
     {
       title: 'instagram icon',
-      img: facebookSVG,
+      img: instaSVG,
       link: 'https://www.instagram.com/hleb_swim/',
     },
     {
       title: 'facebook icon',
-      img: instaSVG,
-      link: 'https://www.facebook.com/profile.php?id=61563499358999&sk=followers',
+      img: facebookSVG,
+      link: 'https://www.facebook.com/profile.php?id=61563499358999',
     },
   ];
 
@@ -39,14 +39,14 @@ function Contact() {
     >
       <div className="flex flex-col md:flex-row w-full gap-4 ">
         <div className="md:w-1/2 w-full">
-          <div className="text-lg mb-1">Reach me out</div>
+          <div className="text-xl mb-1 font-bold">Reach me out</div>
 
           <div className="flex flex-col justify-start gap-2">
             {contactLinks.map((link) => (
               <a
                 href={link.tel ? link.tel : link.mailto ? link.mailto : '#'}
                 key={link.contact}
-                className="flex items-center gap-2 font-bold cursor-pointer hover:text-main transition-all ease-in-out duration-400"
+                className="flex items-center gap-2 font-semibold cursor-pointer hover:text-main transition-all ease-in-out duration-400"
               >
                 <img className="w-8 h-8" src={link.img} alt={link.title} />
                 {link.contact}
@@ -87,7 +87,6 @@ function Contact() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-        {/* <iframe title="Lesson Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4884.561098261746!2d20.989341438098155!3d52.25645032806695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb8a36933d49%3A0x217f77d253bc2ffa!2sWarszawa%20Gda%C5%84ska!5e0!3m2!1sen!2spl!4v1749283668518!5m2!1sen!2spl" className="w-full h-[400px] rounded-xl" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
       </div>
     </section>
   );
