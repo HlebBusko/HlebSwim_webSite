@@ -119,42 +119,50 @@ function Booking4() {
     console.log(name);
   }, [name]);
   return (
-    <div className="px-8 flex flex-col justify-center items-center bg-bgSection py-4">
+    <div className="px-8 flex flex-col justify-center w-full items-center bg-bgSection py-4">
       <div className="font-bold text-2xl">Book your lesson</div>
-      <div className="flex mb-4">
-        <div className="mr-4 w-full">
-          <h1 className="text-xl text-center w-full font-semibold mb-1">
+      <div className="flex mb-4 md:flex-row flex-col gap-2">
+        <div className="mr-4 w-full flex flex-col">
+          <h1 className="md:text-xl text-md text-center w-full font-semibold mb-1">
             Choose the month
           </h1>
-          <select
-            className="w-full border h-12 py-2 px-4 rounded-xl"
-            value={pickedMonth}
-            onChange={(e) => handlePickedMonth(e)}
-            name=""
-            id=""
-          >
-            <option value={currentMonth}>
-              {today.startOf('month').format('MMMM')}
-            </option>
-            <option value={nextMonth}>
-              {today.startOf('month').add(1, 'month').format('MMMM')}
-            </option>
-          </select>
-        </div>
-        <div className="flex justify-center items-end gap-4">
-          <input
-            type="text"
-            className="border h-13 rounded-xl pl-4"
-            placeholder="Your name"
-            onChange={(e) => handleName(e)}
-          />
-          <div
-            className={`${pickedTimeDay ? 'px-4' : 'w-30'} px-6 h-12 rounded-xl items-center justify-center border flex gap-4`}
-          >
-            {pickedTimeDay && pickedTimeDay.day}
-            {pickedTimeDay && `.${selectedMonthObj.format('MM')}`}
-            <div>{pickedTimeDay && pickedTimeDay.time}</div>
+          <div className="flex gap-2">
+            <select
+              className="w-full border h-12 py-2 px-4 rounded-xl"
+              value={pickedMonth}
+              onChange={(e) => handlePickedMonth(e)}
+              name=""
+              id=""
+            >
+              <option value={currentMonth}>
+                {today.startOf('month').format('MMMM')}
+              </option>
+              <option value={nextMonth}>
+                {today.startOf('month').add(1, 'month').format('MMMM')}
+              </option>
+            </select>
+
+            <div
+              className={`${pickedTimeDay ? 'px-4' : 'w-30'} px-6 h-12 rounded-xl items-center justify-center border flex gap-4`}
+            >
+              {pickedTimeDay && pickedTimeDay.day}
+              {pickedTimeDay && `.${selectedMonthObj.format('MM')}`}
+              <div>{pickedTimeDay && pickedTimeDay.time}</div>
+            </div>
           </div>
+        </div>
+        <div className="flex w-full justify-center md:items-end items-start gap-4">
+          <div>
+            <div className="text-xs md:block hidden">* Name is required</div>
+            <input
+              type="text"
+              className="border flex h-13 min-w-30 rounded-xl w-full pl-4"
+              placeholder="Your name"
+              onChange={(e) => handleName(e)}
+            />
+            <div className="text-xs md:hidden">* Name is required</div>
+          </div>
+
           <button
             onClick={() => {
               if (pickedTimeDay && name) {
@@ -205,7 +213,7 @@ function Booking4() {
                 {item.date}
               </div>
               <div
-                className={`absolute lg:left-100 sm:right-50 right-0 bg-blue-100 z-30 py-2 px-4  ${displaySlots && item.date === pickedDay ? 'block' : 'hidden'}`}
+                className={`absolute lg:left-100 sm:right-50 right-0 bg-blue-100 z-30 py-2 px-4 ${displaySlots && item.date === pickedDay ? 'block' : 'hidden'}`}
               >
                 <div className="text-center font-semibold">
                   Pick available time
