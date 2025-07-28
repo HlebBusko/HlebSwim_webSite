@@ -114,7 +114,7 @@ function Booking4() {
   }
   useEffect(() => {
     fetchData();
-  }, []);
+  });
   useEffect(() => {
     console.log(name);
   }, [name]);
