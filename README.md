@@ -2,7 +2,7 @@
 
 This is a professional one-page website for my swimming instruction services, built from scratch using **React**, **Vite**, and **Tailwind CSS**. It demonstrates responsive design, interactive UI logic, calendar booking functionality, and a clean component-based structure.
 
-📍 [Live Demo →](https://your-netlify-link.netlify.app)  
+📍 [Live Demo →](https://hlebswim.netlify.app/)  
 📁 [GitHub Repository](https://github.com/HlebBusko/HlebSwim_webSite)
 
 ---
