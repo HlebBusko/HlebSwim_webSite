@@ -39,7 +39,7 @@ function NavBar() {
           <Link to="hero" smooth={true} duration={300} offset={-100}>
             <img
               className="cursor-pointer w-auto h-14 hover:scale-110 transition-all duration-500 "
-              src="./src/assets/logo2.png"
+              src={new URL('./src/assets/logo2.png', import.meta.url).href}
               alt="logo"
             />
           </Link>
