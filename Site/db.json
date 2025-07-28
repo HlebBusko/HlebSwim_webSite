@@ -141,6 +141,20 @@
       "time": "14:30",
       "month": 6,
       "name": "12313"
+    },
+    {
+      "id": "bb85",
+      "day": 21,
+      "time": "12:30",
+      "month": 7,
+      "name": "Hleb"
+    },
+    {
+      "id": "7c7f",
+      "day": 21,
+      "time": "18:30",
+      "month": 7,
+      "name": "Hleb"
     }
   ]
 }
