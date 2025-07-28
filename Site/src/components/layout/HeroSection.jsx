@@ -1,5 +1,5 @@
 import ButtonMain from '../ui/ButtonMain';
-import raingame from '../../assets/raingame.jpg';
+import raingame from '../../assets/rainGame.jpg';
 
 function HeroSection() {
   return (
