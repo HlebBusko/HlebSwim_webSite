@@ -1,3 +1,4 @@
+import aboutMe from '../../assets/aboutMe.jpg';
 function AboutMe() {
   return (
     <section
@@ -5,11 +6,7 @@ function AboutMe() {
       className="flex flex-col md:flex-row gap-4 md:gap-4 lg:px-16 sm:px-8 px-4 w-full py-4 bg-bgSection items-center"
     >
       <div className="w-full flex-2 max-w-lg">
-        <img
-          className="rounded-lg w-full object-cover"
-          src="./src/assets/aboutMe.jpg"
-          alt=""
-        />
+        <img className="rounded-lg w-full object-cover" src={aboutMe} alt="" />
       </div>
       <div className="flex flex-2 flex-col justify-center  gap-2">
         <h1 className="font-bold text-lg">About me:</h1>

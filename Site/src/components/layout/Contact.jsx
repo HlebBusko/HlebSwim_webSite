@@ -1,13 +1,18 @@
+import facebookSVG from '../../assets/facebookSVG.svg';
+import instaSVG from '../../assets/instaSVG.svg';
+import phone from '../../assets/phone.svg';
+import envelope from '../../assets/envelope.svg';
+
 function Contact() {
   const socialLinks = [
     {
       title: 'instagram icon',
-      img: './src/assets/instaSVG.svg',
+      img: facebookSVG,
       link: 'https://www.instagram.com/hleb_swim/',
     },
     {
       title: 'facebook icon',
-      img: './src/assets/facebookSVG.svg',
+      img: instaSVG,
       link: 'https://www.facebook.com/profile.php?id=61563499358999&sk=followers',
     },
   ];
@@ -16,13 +21,13 @@ function Contact() {
     {
       title: 'phone icon',
       contact: '+48 796 746 210',
-      img: './src/assets/phone.svg',
+      img: phone,
       tel: 'tel:+48796746210',
     },
     {
       title: 'envelope icon',
       contact: 'hleb.busko@gmail.com',
-      img: './src/assets/envelope.svg',
+      img: envelope,
       mailto: 'mailto:hleb.busko@gmail.com',
     },
   ];

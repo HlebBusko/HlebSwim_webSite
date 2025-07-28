@@ -1,4 +1,5 @@
 import ButtonMain from '../ui/ButtonMain';
+import raingame from '../../assets/raingame.jpg';
 
 function HeroSection() {
   return (
@@ -26,7 +27,7 @@ function HeroSection() {
           className="w-full object-contain h-full xx 
         md:aspect-[3/2] 
         rounded-lg"
-          src="./src/assets/raingame.jpg"
+          src={raingame}
           alt=""
         />
       </div>

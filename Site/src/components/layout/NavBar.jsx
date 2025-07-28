@@ -2,6 +2,9 @@ import ButtonMain from '../ui/ButtonMain.jsx';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import NavLink from '../ui/NavLink.jsx';
+import logo from '../../assets/logo2.png';
+import menu from '../../assets/menu.svg';
+import close from '../../assets/close.svg';
 
 function NavBar() {
   const [isDisplayed, setIsDisplayed] = useState(false);
@@ -39,7 +42,7 @@ function NavBar() {
           <Link to="hero" smooth={true} duration={300} offset={-100}>
             <img
               className="cursor-pointer w-auto h-14 hover:scale-110 transition-all duration-500 "
-              src={new URL('./src/assets/logo2.png', import.meta.url).href}
+              src={logo}
               alt="logo"
             />
           </Link>
@@ -64,7 +67,7 @@ function NavBar() {
         <div className="right-section flex items-center ml-6 gap-3">
           <img
             className={`w-8 sm:hidden cursor-pointer ${!isDisplayed ? 'block' : 'hidden'}`}
-            src="./src/assets/menu.svg"
+            src={menu}
             alt="burger-menu"
             onClick={handleMenu}
             role="button"
@@ -72,7 +75,7 @@ function NavBar() {
             aria-expanded={isDisplayed}
           />
           <img
-            src="./src/assets/close.svg"
+            src={close}
             className={`w-8 ${isDisplayed ? 'block' : 'hidden'} cursor-pointer`}
             alt=""
             onClick={handleMenu}

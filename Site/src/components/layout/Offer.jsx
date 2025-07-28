@@ -1,4 +1,6 @@
 import Card from '../ui/Card';
+import groupphoto from '../../assets/group-photo.jpg';
+import minephoto from '../../assets/minephoto.jpg';
 
 function Offer() {
   return (
@@ -14,7 +16,7 @@ function Offer() {
             free
           </>
         }
-        img={'/src/assets/minephoto.jpg'}
+        img={minephoto}
       >
         <div className="mb-4">
           <h1 className="text-lg font-bold mb-4">Individual lesson</h1>
@@ -36,7 +38,7 @@ function Offer() {
       </Card>
 
       <Card
-        img={'/src/assets/group-photo.jpg'}
+        img={groupphoto}
         price={
           <>
             Price: <strong>200PLN</strong> + entry to the swimming pool — for

@@ -1,5 +1,7 @@
 import ButtonMain from '../ui/ButtonMain';
 import { Link } from 'react-scroll';
+import instagram from '../../assets/instagram.png';
+import facebook from '../../assets/facebook.png';
 
 function Footer() {
   const links = [
@@ -35,12 +37,12 @@ function Footer() {
           <div className="flex gap-2 items-center justify-center">
             <img
               className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-              src="./src/assets/instagram.png"
+              src={instagram}
               alt=""
             />
             <img
               className="w-6 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
-              src="./src/assets/facebook.png"
+              src={facebook}
               alt=""
             />
           </div>
