@@ -21,7 +21,7 @@ This is a professional one-page website for my swimming instruction services, bu
 
 - **Frontend:** React, Vite, Tailwind CSS
 - **State Management:** React Hooks
-- **UI Libraries:** `react-scroll`, `dayjs`, `clsx`
+- **UI Libraries:** `react-scroll`, `dayjs`
 - **Mock Backend:** `json-server`
 - **Deployment:** Netlify
 
