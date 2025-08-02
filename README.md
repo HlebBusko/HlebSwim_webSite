@@ -78,6 +78,9 @@ I’m a professional swimming coach with a passion for coding. This project show
 
 Feel free to explore the code — feedback welcome!
 
-📧 Contact: [hleb.busko@gmail.com]
-🌐 Portfolio: [https://portfoliohleb.netlify.app/]
-📍 Based in Warsaw, Poland | Fluent in English & Polish. Native in Russian
+## Contact me
+
+- 📧 Mail: [hleb.busko@gmail.com]
+- 🌐 Portfolio: [https://portfoliohleb.netlify.app/]
+- 🐙 GitHub: [https://github.com/HlebBusko]
+- 📍 Based in Warsaw, Poland | Fluent in English & Polish. Native in Russian
