@@ -30,7 +30,7 @@ This is a professional one-page website for my swimming instruction services, bu
 ## 💻 Local Setup
 
 ```bash
-git clone https://github.com/HlebBusko/HlebSwim_webSite
+git clone https://github.com/HlebBusko/HlebSwim_webSite.git
 cd Site
 npm install
 npm run dev
